@@ -87,7 +87,7 @@
             <div class="left-header col-md-6"><img class="animated zoomIn" src="img/logo.png" alt=""/></div>
             <div class="right-header col-md-6">
                 <div class="row">
-                    <div class="right-header-info">
+                    <div class="right-header-info animated fadeIn">
                         <p><i class="fa fa-map-marker"></i> г. Махачкала,<br/>
                             ул. Ярагского, 74 </p>
                         <p><i class="fa fa-clock-o"></i>
@@ -95,12 +95,12 @@
                             &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;Сб.: 9:00 - 16:00 <br/>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Вс: Выходной </p>
                     </div>
-                    <div class="right-header-number">
+                    <div class="right-header-number animated fadeIn">
                         <p><i class="fa fa-phone"></i>
                             +7 928 832-23-22</p>
                     </div>
-                    <div class="right-header-email"><p><i class="fa fa-envelope-o"></i>cifra05@ya.ru</p></div>
-                    <div class="right-header-menu">
+                    <div class="right-header-email animated fadeIn"><p><i class="fa fa-envelope-o"></i>cifra05@ya.ru</p></div>
+                    <div class="right-header-menu animated fadeIn">
                         <ul>
                             <li><a class="active" href="">Главная</a></li>
                             <li><a href="">О нас</a></li>
@@ -110,7 +110,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="bg-right-header"></div>
+
             </div>
         </div>
     </div>
@@ -118,12 +118,46 @@
 <section id="slider" class="slider">
     <div class="container-fluid">
         <div class="row">
-            <div class="slider-leftBox col-md-6"></div>
-            <div class="slider-rightBox col-md-6"></div>
+            <div class="slider-leftBox col-md-6">
+                <p><a href="">Цифровая печать</a></p>
+                <p><a href="">Оперативная печать</a></p>
+                <p><a href="">Офсетная печать</a></p>
+                <p><a href="">Широкоформатная печать</a></p>
+                <p><a href="">Дизайн</a></p>
+                <p><a href="">Переплетные работы</a></p>
+            </div>
+            <div class="slider-rightBox col-md-6">
+                <div id="sync1" class="owl-carousel">
+                    <div class="item"><h1>1</h1></div>
+                    <div class="item"><h1>2</h1></div>
+                    <div class="item"><h1>3</h1></div>
+                    <div class="item"><h1>4</h1></div>
+                    <div class="item"><h1>5</h1></div>
+                    <div class="item"><h1>6</h1></div>
+
+                </div>
+
+
+            </div>
         </div>
     </div>
 
+
 </section>
+
+
+
+<div id="sync2" class="owl-carousel">
+    <div class="item"><h1>1</h1></div>
+    <div class="item"><h1>2</h1></div>
+    <div class="item"><h1>3</h1></div>
+    <div class="item"><h1>4</h1></div>
+    <div class="item"><h1>5</h1></div>
+    <div class="item"><h1>6</h1></div>
+
+</div>
+
+
 <footer>
     <p>Copyright © 2008 All Rights<p>
 </footer>
@@ -138,7 +172,6 @@
 	<script type="text/javascript" src="libs/fancybox/jquery.fancybox.pack.js"></script>
 	<script type="text/javascript" src="libs/waypoints/waypoints-1.6.2.min.js"></script>
 	<script type="text/javascript" src="libs/scrollto/jquery.scrollTo.min.js"></script>
-	<script type="text/javascript" src="libs/owl-carousel/owl.carousel.min.js"></script>
 	<script type="text/javascript" src="libs/countdown/jquery.plugin.js"></script>
 	<script type="text/javascript" src="libs/countdown/jquery.countdown.min.js"></script>
 	<script type="text/javascript" src="libs/countdown/jquery.countdown-ru.js"></script>

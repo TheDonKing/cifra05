@@ -114,20 +114,24 @@ html{
 p{
   font-size:1.600em;
 }
-.figure(@grad:50grad) {
-  .transform(skewX(@grad));
+.fadeIn{
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
 }
 //Сили для Header
 header{
   width: 100%;
   height: 397px;
-  background-color:#fff;
+  background-color:@color_basic;
   //Сили для левого блока
   .left-header{
     height: 395px;
-    background-color: #fff;
     float: left;
-    width: 40%;
+    width: 44.4%;
+    border-bottom: 39.700em solid #fff;
+    border-left: 0px solid transparent;
+    border-right: 107px solid transparent;
+
     img{
       -webkit-animation-duration: 2s;
       animation-duration: 2s;
@@ -138,19 +142,16 @@ header{
   }
   //Сили для правого блока
   .right-header {
-    .figure(@grad:25grad);
     height: 397px;
     background-color: @color_basic;
-    width: 60%;
+    width: 55.6%;
     position: relative;
 
     .right-header-info,.right-header-number,.right-header-email, .right-header-menu{ //Обноление трансформация для всех внутренних блоков
-      .figure(@grad:-25grad);
     }
     .right-header-info{
-      margin-left: 446px;
+      margin-left:275px;
       margin-top: 80px;
-
       p{
         float: left;
         margin-right: 35px;
@@ -162,16 +163,14 @@ header{
       }
     }
     .right-header-number{
-      overflow: hidden;
-      width: 100%;
-      margin-left: 318px;
+      margin-left: 180px;
       p{
         font:4.400em mullerbold, sans-serif;
         color: @color_basic2;
       }
     }
     .right-header-email{
-      margin-left: 490px;
+      margin-left: 371px;
       p{
         font:4.400em mullerbold, sans-serif;
         font-size: 2.759em;
@@ -185,7 +184,7 @@ header{
     }
     .right-header-menu{
       margin-top: 75px;
-      margin-left:144px;
+      margin-left:75px;
       overflow: hidden;
       ul li{
         list-style: none;
@@ -212,28 +211,77 @@ header{
     .row{
       float: left;
     }
-
-     .bg-right-header{
-       .figure(@grad:-25grad);
+    .bg-right-header{
        position: absolute;
        width: 10%;
        height: 397px;
        background-color: @color_basic;
        right: 0;
      }
-
   }
 }
 .slider{
-  min-height: 39.600em;
-  background-color: @color_basic2;
+  width: 100%;
+  height: 39.600em;
+  overflow: hidden;
+  background-color: @color_basic;
   .slider-leftBox{
-    background-color: @color_basic2;
-    .figure(@grad:25grad);
+    float: left;
+    border-bottom: 39.600em solid @color_basic2;
+    border-left: 0px solid transparent;
+    border-right: 107px solid transparent;
+    height: 0;
+    width: 50%;
+    p{
+      font-size: 4.000em;
+      margin: 0;
+      line-height: 1.3em;
+      a{
+        color: #fff;
+      }
+
+    }
+  }
+  .slider-rightBox{
+    height: 39.600em;
+    width: 50%;
+
   }
   h1{
     margin: 0;
     padding: 0;
   }
+
 }
+
+
+#sync1 .item{
+  background: #0c83e7;
+  padding: 80px 0px;
+  margin: 5px;
+  color: #FFF;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  text-align: center;
+}
+#sync2 .item{
+  background: #C9C9C9;
+  padding: 10px 0px;
+  margin: 5px;
+  color: #FFF;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  text-align: center;
+  cursor: pointer;
+}
+#sync2 .item h1{
+  font-size: 18px;
+}
+#sync2 .synced .item{
+  background: #0c83e7;
+}
+
+
 
