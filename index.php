@@ -14,7 +14,7 @@
     <meta name="keywords" content="FraemWork"/>
     <meta name="robots" content="all"/>
     <meta name="description" content="Framework">
-    <title>Framework</title>
+    <title>Цифра05</title>
     <meta name='yandex-verification' content='6c33212f4dc14e06' />
 
     <!-- Для нормального отображении сайта в мобильных устройствах  -->
@@ -61,6 +61,7 @@
     <link rel="stylesheet" href="css/fonts.css" type="text/css"/>
     <link rel="stylesheet" href="css/ie.css" type="text/css" />
 	<link rel="stylesheet" href="css/media.css" type="text/css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.0/animate.min.css" type="text/css"/>
 
     <script type="text/javascript" src="js/modernizr.custom.js"></script>
 
@@ -81,41 +82,47 @@
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
 <header>
-    <h1><a href="#">Стандартный блог</a></h1>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="left-header col-md-6"><img class="animated zoomIn" src="img/logo.png" alt=""/></div>
+            <div class="right-header col-md-6">
+                <div class="row">
+                    <div class="right-header-info">
+                        <p><i class="fa fa-map-marker"></i> г. Махачкала,<br/>
+                            ул. Ярагского, 74 </p>
+                        <p><i class="fa fa-clock-o"></i>
+                            Пн-Пт: 9:00 - 18:00 <br/>
+                            &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;Сб.: 9:00 - 16:00 <br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Вс: Выходной </p>
+                    </div>
+                    <div class="right-header-number">
+                        <p><i class="fa fa-phone"></i>
+                            +7 928 832-23-22</p>
+                    </div>
+                    <div class="right-header-email"><p><i class="fa fa-envelope-o"></i>cifra05@ya.ru</p></div>
+                    <div class="right-header-menu">
+                        <ul>
+                            <li><a class="active" href="">Главная</a></li>
+                            <li><a href="">О нас</a></li>
+                            <li><a href="">Услуги</a></li>
+                            <li><a href="">Цены</a></li>
+                            <li><a href="">Контакты</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bg-right-header"></div>
+            </div>
+        </div>
+    </div>
 </header>
-<nav>
-    <ul>
-        <li><a href="#">Главная</a></li>
-        <li><a href="#">Архив</a></li>
-        <li><a href="#">О блоге</a></li>
-        <li><a href="#">Контакты</a></li>
-    </ul>
-</nav>
-<section>
-    <article>
-        <header>
-            <h1><a href="#">Заголовок</a></h1>
-        </header>
-        <section>
-            <p>Тут текст...</p>
-        </section>
-    </article>
-    <article>
-        <header>
-            <h1><a href="#">Заголовок</a></h1>
-        </header>
-        <section>
-            <p>Тут текст...</p>
-        </section>
-    </article>
-    <article>
-        <header>
-            <h1><a href="#">Заголовок</a></h1>
-        </header>
-        <section>
-            <p>Тут текст...</p>
-        </section>
-    </article>
+<section id="slider" class="slider">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="slider-leftBox col-md-6"></div>
+            <div class="slider-rightBox col-md-6"></div>
+        </div>
+    </div>
+
 </section>
 <footer>
     <p>Copyright © 2008 All Rights<p>
@@ -125,7 +132,8 @@
 
 <!-- Тут подключаем скрипты -->
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script type="text/javascript" src="libs/respond/respond.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="libs/respond/respond.min.js"></script>
     <script type="text/javascript" src="libs/jquery-mousewheel/jquery.mousewheel.min.js"></script>
 	<script type="text/javascript" src="libs/fancybox/jquery.fancybox.pack.js"></script>
 	<script type="text/javascript" src="libs/waypoints/waypoints-1.6.2.min.js"></script>

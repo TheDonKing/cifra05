@@ -1,40 +1,76 @@
-/* font-family: "RobotoRegular"; */
 @font-face {
-	font-family: "RobotoRegular";
-	src: url("../fonts/RobotoRegular/RobotoRegular.eot");
-	src: url("../fonts/RobotoRegular/RobotoRegular.eot?#iefix")format("embedded-opentype"),
-	url("../fonts/RobotoRegular/RobotoRegular.woff") format("woff"),
-	url("../fonts/RobotoRegular/RobotoRegular.ttf") format("truetype");
-	font-style: normal;
-	font-weight: normal;
+    font-family: 'mullerbold_italic';
+    src: url('../fonts/muller/muller-bold_italic.eot');
+    src: url('../fonts/muller/muller-bold_italic.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/muller/muller-bold_italic.woff2') format('woff2'),
+    url('../fonts/muller/muller-bold_italic.woff') format('woff'),
+    url('../fonts/muller/muller-bold_italic.ttf') format('truetype'),
+    url('../fonts/muller/muller-bold_italic.svg#mullerbold_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
 }
-/* font-family: "RobotoLight"; */
+
+
+
+
 @font-face {
-	font-family: "RobotoLight";
-	src: url("../fonts/RobotoLight/RobotoLight.eot");
-	src: url("../fonts/RobotoLight/RobotoLight.eot?#iefix")format("embedded-opentype"),
-	url("../fonts/RobotoLight/RobotoLight.woff") format("woff"),
-	url("../fonts/RobotoLight/RobotoLight.ttf") format("truetype");
-	font-style: normal;
-	font-weight: normal;
+    font-family: 'mullerbold';
+    src: url('../fonts/muller/muller-bold.eot');
+    src: url('../fonts/muller/muller-bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/muller/muller-bold.woff2') format('woff2'),
+    url('../fonts/muller/muller-bold.woff') format('woff'),
+    url('../fonts/muller/muller-bold.ttf') format('truetype'),
+    url('../fonts/muller/muller-bold.svg#mullerbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
 }
-/* font-family: "RobotoMedium"; */
+
+
+
+
 @font-face {
-	font-family: "RobotoMedium";
-	src: url("../fonts/RobotoMedium/RobotoMedium.eot");
-	src: url("../fonts/RobotoMedium/RobotoMedium.eot?#iefix")format("embedded-opentype"),
-	url("../fonts/RobotoMedium/RobotoMedium.woff") format("woff"),
-	url("../fonts/RobotoMedium/RobotoMedium.ttf") format("truetype");
-	font-style: normal;
-	font-weight: normal;
+    font-family: 'mullerlight';
+    src: url('../fonts/muller/muller-light.eot');
+    src: url('../fonts/muller/muller-light.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/muller/muller-light.woff2') format('woff2'),
+    url('../fonts/muller/muller-light.woff') format('woff'),
+    url('../fonts/muller/muller-light.ttf') format('truetype'),
+    url('../fonts/muller/muller-light.svg#mullerlight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
 }
-/* font-family: "RobotoBold"; */
+
+
+
+
 @font-face {
-	font-family: "RobotoBold";
-	src: url("../fonts/RobotoBold/RobotoBold.eot");
-	src: url("../fonts/RobotoBold/RobotoBold.eot?#iefix")format("embedded-opentype"),
-	url("../fonts/RobotoBold/RobotoBold.woff") format("woff"),
-	url("../fonts/RobotoBold/RobotoBold.ttf") format("truetype");
-	font-style: normal;
-	font-weight: normal;
+    font-family: 'mullerregular_italic';
+    src: url('../fonts/muller/muller-regular_italic.eot');
+    src: url('../fonts/muller/muller-regular_italic.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/muller/muller-regular_italic.woff2') format('woff2'),
+    url('../fonts/muller/muller-regular_italic.woff') format('woff'),
+    url('../fonts/muller/muller-regular_italic.ttf') format('truetype'),
+    url('../fonts/muller/muller-regular_italic.svg#mullerregular_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'muller_regularregular';
+    src: url('../fonts/muller/muller-regular.eot');
+    src: url('../fonts/muller/muller-regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/muller/muller-regular.woff2') format('woff2'),
+    url('../fonts/muller/muller-regular.woff') format('woff'),
+    url('../fonts/muller/muller-regular.ttf') format('truetype'),
+    url('../fonts/muller/muller-regular.svg#muller_regularregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
 }

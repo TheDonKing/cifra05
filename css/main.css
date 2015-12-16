@@ -1,4 +1,10 @@
 @import "moz.css";
+/*---------------------------------------------------
+    LESS Elements 0.9
+  ---------------------------------------------------
+    A set of useful LESS mixins
+    More info at: http://lesselements.com
+  ---------------------------------------------------*/
 *::-webkit-input-placeholder {
   color: #666;
   opacity: 1;
@@ -66,7 +72,7 @@ textarea {
    Author's custom styles
    ========================================================================== */
 body {
-  font-family: RobotoRegular, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: muller_regularregular, Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 62.5%;
   line-height: 1.66em;
   letter-spacing: 0.025em;
@@ -78,6 +84,142 @@ body {
   background-color: #e6e6e7;
   font-kerning: auto;
 }
+html {
+  font-size: inherit;
+}
 p {
   font-size: 1.600em;
+}
+header {
+  width: 100%;
+  height: 397px;
+  background-color: #fff;
+}
+header .left-header {
+  height: 395px;
+  background-color: #fff;
+  float: left;
+  width: 40%;
+}
+header .left-header img {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  display: block;
+  text-align: center;
+  margin: 10% auto;
+}
+header .right-header {
+  -webkit-transform: skewX(25grad);
+  -moz-transform: skewX(25grad);
+  -o-transform: skewX(25grad);
+  -ms-transform: skewX(25grad);
+  transform: skewX(25grad);
+  height: 397px;
+  background-color: #f8dc00;
+  width: 60%;
+  position: relative;
+}
+header .right-header .right-header-info,
+header .right-header .right-header-number,
+header .right-header .right-header-email,
+header .right-header .right-header-menu {
+  -webkit-transform: skewX(-25grad);
+  -moz-transform: skewX(-25grad);
+  -o-transform: skewX(-25grad);
+  -ms-transform: skewX(-25grad);
+  transform: skewX(-25grad);
+}
+header .right-header .right-header-info {
+  margin-left: 446px;
+  margin-top: 80px;
+}
+header .right-header .right-header-info p {
+  float: left;
+  margin-right: 35px;
+  font-size: 1.500em;
+  color: #575756;
+}
+header .right-header .right-header-info p i {
+  font-size: 24px;
+}
+header .right-header .right-header-number {
+  overflow: hidden;
+  width: 100%;
+  margin-left: 318px;
+}
+header .right-header .right-header-number p {
+  font: 4.4em mullerbold, sans-serif;
+  color: #575756;
+}
+header .right-header .right-header-email {
+  margin-left: 490px;
+}
+header .right-header .right-header-email p {
+  font: 4.4em mullerbold, sans-serif;
+  font-size: 2.759em;
+  text-align: left;
+  color: #575756;
+}
+header .right-header .right-header-email p i {
+  margin-right: 15px;
+}
+header .right-header .right-header-menu {
+  margin-top: 75px;
+  margin-left: 144px;
+  overflow: hidden;
+}
+header .right-header .right-header-menu ul li {
+  list-style: none;
+  display: inline-block;
+  margin-right: 34px;
+}
+header .right-header .right-header-menu ul li a {
+  font: 2em mullerlight, sans-serif;
+  color: #575756;
+}
+header .right-header .right-header-menu ul li a:hover {
+  -moz-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  text-decoration: none;
+  border-bottom: 3px solid #575756;
+  line-height: 2em;
+  display: inline-block;
+}
+header .right-header .right-header-menu ul li a.active {
+  line-height: 2em;
+  display: inline-block;
+  border-bottom: 3px solid #575756;
+}
+header .right-header .row {
+  float: left;
+}
+header .right-header .bg-right-header {
+  -webkit-transform: skewX(-25grad);
+  -moz-transform: skewX(-25grad);
+  -o-transform: skewX(-25grad);
+  -ms-transform: skewX(-25grad);
+  transform: skewX(-25grad);
+  position: absolute;
+  width: 10%;
+  height: 397px;
+  background-color: #f8dc00;
+  right: 0;
+}
+.slider {
+  min-height: 39.600em;
+  background-color: #575756;
+}
+.slider .slider-leftBox {
+  background-color: #575756;
+  -webkit-transform: skewX(25grad);
+  -moz-transform: skewX(25grad);
+  -o-transform: skewX(25grad);
+  -ms-transform: skewX(25grad);
+  transform: skewX(25grad);
+}
+.slider h1 {
+  margin: 0;
+  padding: 0;
 }

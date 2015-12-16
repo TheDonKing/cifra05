@@ -1,4 +1,5 @@
 @import "moz.css";
+@import "elements";
 
 *::-webkit-input-placeholder {
 	color: #666;
@@ -85,8 +86,17 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+//Basic style less
+.outline(@color){
+  outline: 1px solid @color;
+}
+@color_basic:#f8dc00;
+@color_basic2:#575756;
+@color_basic3:#f33353;
+@color_basic4:#dddddd;
+
 body {
-  font-family:RobotoRegular,Helvetica Neue,Helvetica,Arial, sans-serif;
+  font-family: muller_regularregular,Helvetica Neue,Helvetica,Arial, sans-serif;
   font-size: 62.5%;
   line-height: 1.66em;
   letter-spacing: 0.025em;
@@ -96,9 +106,134 @@ body {
   background-color: #e6e6e7;
   font-kerning: auto;
 }
+html{
+  font-size: inherit;
+}
 
 
 p{
   font-size:1.600em;
+}
+.figure(@grad:50grad) {
+  .transform(skewX(@grad));
+}
+//Сили для Header
+header{
+  width: 100%;
+  height: 397px;
+  background-color:#fff;
+  //Сили для левого блока
+  .left-header{
+    height: 395px;
+    background-color: #fff;
+    float: left;
+    width: 40%;
+    img{
+      -webkit-animation-duration: 2s;
+      animation-duration: 2s;
+      display: block;
+      text-align: center;
+      margin: 10% auto;
+    }
+  }
+  //Сили для правого блока
+  .right-header {
+    .figure(@grad:25grad);
+    height: 397px;
+    background-color: @color_basic;
+    width: 60%;
+    position: relative;
+
+    .right-header-info,.right-header-number,.right-header-email, .right-header-menu{ //Обноление трансформация для всех внутренних блоков
+      .figure(@grad:-25grad);
+    }
+    .right-header-info{
+      margin-left: 446px;
+      margin-top: 80px;
+
+      p{
+        float: left;
+        margin-right: 35px;
+        font-size: 1.500em;
+        color: @color_basic2;
+        i{
+          font-size:24px;
+        }
+      }
+    }
+    .right-header-number{
+      overflow: hidden;
+      width: 100%;
+      margin-left: 318px;
+      p{
+        font:4.400em mullerbold, sans-serif;
+        color: @color_basic2;
+      }
+    }
+    .right-header-email{
+      margin-left: 490px;
+      p{
+        font:4.400em mullerbold, sans-serif;
+        font-size: 2.759em;
+        text-align: left;
+        color: @color_basic2;
+        i{
+          margin-right: 15px;
+        }
+      }
+
+    }
+    .right-header-menu{
+      margin-top: 75px;
+      margin-left:144px;
+      overflow: hidden;
+      ul li{
+        list-style: none;
+        display: inline-block;
+        margin-right: 34px;
+        a{
+          font:2em mullerlight, sans-serif;
+          color: @color_basic2;
+          &:hover{
+            .transition-duration(0.2s);
+            text-decoration:none;
+            border-bottom: 3px solid @color_basic2;
+            line-height: 2em;
+            display: inline-block;
+          }
+          &.active{
+            line-height: 2em;
+            display: inline-block;
+            border-bottom: 3px solid @color_basic2;
+          }
+        }
+      }
+    }
+    .row{
+      float: left;
+    }
+
+     .bg-right-header{
+       .figure(@grad:-25grad);
+       position: absolute;
+       width: 10%;
+       height: 397px;
+       background-color: @color_basic;
+       right: 0;
+     }
+
+  }
+}
+.slider{
+  min-height: 39.600em;
+  background-color: @color_basic2;
+  .slider-leftBox{
+    background-color: @color_basic2;
+    .figure(@grad:25grad);
+  }
+  h1{
+    margin: 0;
+    padding: 0;
+  }
 }
 
