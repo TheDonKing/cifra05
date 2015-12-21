@@ -51,10 +51,12 @@
 
     <!-- Libs -->
 	<link rel="stylesheet" href="libs/bootstrap/bootstrap.min.css" type="text/css" />
-	<link rel="stylesheet" href="libs/font-awesome-4.2.0/css/font-awesome.min.css" type="text/css" />
-	<link rel="stylesheet" href="libs/fancybox/jquery.fancybox.css" type="text/css" />
-	<link rel="stylesheet" href="libs/owl-carousel/owl.carousel.css" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="libs/fancybox/jquery.fancybox.css" type="text/css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css" type="text/css" />
 	<link rel="stylesheet" href="libs/countdown/jquery.countdown.css" type="text/css" />
+    <link rel="stylesheet" href="libs/filter/filter.css" type="text/css" />
 
     <!-- Root Style -->
 	<link rel="stylesheet" href="css/main.css" type="text/css" />
@@ -89,7 +91,7 @@
                 <div class="row">
                     <div class="right-header-info animated fadeIn">
                         <p><i class="fa fa-map-marker"></i> г. Махачкала,<br/>
-                            ул. Ярагского, 74 </p>
+                            &nbsp;&nbsp;&nbsp;&nbsp; ул. Ярагского, 74 </p>
                         <p><i class="fa fa-clock-o"></i>
                             Пн-Пт: 9:00 - 18:00 <br/>
                             &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;Сб.: 9:00 - 16:00 <br/>
@@ -119,63 +121,194 @@
     <div class="container-fluid">
         <div class="row">
             <div class="slider-leftBox col-md-6">
-                <p><a href="">Цифровая печать</a></p>
-                <p><a href="">Оперативная печать</a></p>
-                <p><a href="">Офсетная печать</a></p>
-                <p><a href="">Широкоформатная печать</a></p>
-                <p><a href="">Дизайн</a></p>
-                <p><a href="">Переплетные работы</a></p>
+                <div  class="sync2 owl-carousel">
+                    <div class="item"><a class="active" href="">Цифровая печать</a></div>
+                    <div class="item"><a class="active" href="">Оперативная печать</a></div>
+                    <div class="item"><a class="active" href="">Офсетная печать</a></div>
+                    <div class="item"><a class="active" href="">Широкоформатная печать</a></div>
+                    <div class="item"><a class="active" href="">Дизайн</a></div>
+                    <div class="item"><a class="active" href="">Переплетные работы</a></div>
+                </div>
+                <a class="slider-button" href="#slider">Полный список услуг</a>
+
             </div>
             <div class="slider-rightBox col-md-6">
-                <div id="sync1" class="owl-carousel">
-                    <div class="item"><h1>1</h1></div>
-                    <div class="item"><h1>2</h1></div>
-                    <div class="item"><h1>3</h1></div>
-                    <div class="item"><h1>4</h1></div>
-                    <div class="item"><h1>5</h1></div>
-                    <div class="item"><h1>6</h1></div>
-
+                <div  class="sync1 owl-carousel">
+                    <div class="item"><img src="img/1.png" alt=""/></div>
+                    <div class="item"><img src="img/1.png" alt=""/></div>
+                    <div class="item"><img src="img/1.png" alt=""/></div>
+                    <div class="item"><img src="img/1.png" alt=""/></div>
+                    <div class="item"><img src="img/1.png" alt=""/></div>
+                    <div class="item"><img src="img/1.png" alt=""/></div>
                 </div>
-
-
             </div>
         </div>
     </div>
-
-
 </section>
 
+<section id="about" class="about">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="about-leftBox col-md-6">
+                <h3>О НАС</h3>
+                <p>
+                    Печать переменных данных (персонализация) используется в производстве таких видов продукции, как скретч карты, билеты, открытки, листовки и буклеты с переменной информацией, рекламная полиграфия для персонализированных direct-mail рассылок, а также приглашения на свадьбу, дипломы, сертификаты и прочие издания, требующие включения уникальной информации. Необходимо отметить, что в своей работе Типография «Принт-Формула» стремится использовать все лучшие программные и технические решения, позволяющие неуклонно повышать качество полиграфии и снижать сроки изготовления.
+                </p>
+                <a class="about-button" href="#about">Подробнее</a>
+            </div>
+            <div class="about-rightBox col-md-6">
+                <div id="owl-demo" class="owl-carousel owl-theme">
+                    <div class="item"><p>СКИДКИ <br/> НА РАЗРАБОТКУ <br/> <span>ФИРМЕННОГО <br/> СТИЛЯ</span> </p><img src="img/viz-cart.png" alt="The Last of us"></div>
+                    <div class="item"><p>СКИДКИ <br/> НА РАЗРАБОТКУ <br/> <span>ФИРМЕННОГО <br/> СТИЛЯ2</span> </p><img src="img/viz-cart.png" alt="GTA V"></div>
+                    <div class="item"><p>СКИДКИ <br/> НА РАЗРАБОТКУ <br/> <span>ФИРМЕННОГО <br/> СТИЛЯ3</span> </p><img src="img/viz-cart.png" alt="Mirror Edge"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="portfolio" class="portfolio">
+    <div class="container">
+        <div class="row">
+            <h3>Наши работы</h3>
+            <main class="cd-main-content">
+                <div class="cd-tab-filter-wrapper">
+                    <div class="cd-tab-filter">
+                        <ul class="cd-filters">
+                            <li class="placeholder">
+                                <a data-type="all" href="#0">Все работы</a> <!-- selected option on mobile -->
+                            </li>
+                            <li class="filter"><a class="selected" href="#0" data-type="all">Все работы</a></li>
+                            <li class="filter" data-filter=".flyers"><a href="#0" data-type="flyers">Листовки</a></li>
+                            <li class="filter" data-filter=".forms"><a href="#0" data-type="forms">Бланки</a></li>
+                            <li class="filter" data-filter=".booklets"><a href="#0" data-type="booklets">Буклеты</a></li>
+                            <li class="filter" data-filter=".cards"><a href="#0" data-type="cards">Визитки</a></li>
+                        </ul> <!-- cd-filters -->
+                    </div> <!-- cd-tab-filter -->
+                </div> <!-- cd-tab-filter-wrapper -->
 
+                <section class="cd-gallery">
+                    <ul>
+                        <li class="mix flyers "><img src="img/img/img-1.jpg" alt="Image 1"></li>
+                        <li class="mix forms "><img src="img/img/img-2.jpg" alt="Image 2"></li>
+                        <li class="mix flyers "><img src="img/img/img-3.jpg" alt="Image 3"></li>
+                        <li class="mix booklets "><img src="img/img/img-1.jpg" alt="Image 4"></li>
+                        <li class="mix flyers "><img src="img/img/img-2.jpg" alt="Image 5"></li>
+                        <li class="mix forms "><img src="img/img/img-3.jpg" alt="Image 6"></li>
+                        <li class="mix forms "><img src="img/img/img-1.jpg" alt="Image 7"></li>
+                        <li class="mix flyers "><img src="img/img/img-2.jpg" alt="Image 8"></li>
+                        <li class="mix color-2 "><img src="img/img/img-3.jpg" alt="Image 9"></li>
+                        <li class="mix booklets "><img src="img/img/img-1.jpg" alt="Image 10"></li>
+                        <li class="mix flyers "><img src="img/img/img-2.jpg" alt="Image 11"></li>
+                        <li class="mix forms "><img src="img/img/img-3.jpg" alt="Image 12"></li>
+                        <li class="mix cards "><img src="img/img/img-1.jpg" alt="Image 11"></li>
+                        <li class="mix cards "><img src="img/img/img-2.jpg" alt="Image 12"></li>
+                        <li class="gap"></li>
+                        <li class="gap"></li>
+                        <li class="gap"></li>
+                    </ul>
+                    <div class="cd-fail-message">No results found</div>
+                </section> <!-- cd-gallery -->
 
-<div id="sync2" class="owl-carousel">
-    <div class="item"><h1>1</h1></div>
-    <div class="item"><h1>2</h1></div>
-    <div class="item"><h1>3</h1></div>
-    <div class="item"><h1>4</h1></div>
-    <div class="item"><h1>5</h1></div>
-    <div class="item"><h1>6</h1></div>
+            </main> <!-- cd-main-content -->
+        </div>
+    </div>
+</section>
+<section class="work">
+    <div class="container">
+        <div class="row">
+            <h3>Как мы работаем</h3>
+            <div class="work-item col-md-3 scrollflow -slide-top -opacity" ><img src="img/work-1.jpg" alt=""/><p>Позвоните и получите консультацию</p></div>
+            <div class="work-item col-md-3 scrollflow -slide-top -opacity"><img src="img/work-2.jpg" alt=""/><p>Мы оформляем заказ</p></div>
+            <div class="work-item col-md-3 scrollflow -slide-top -opacity"><img src="img/work-3.jpg" alt=""/><p>Рисуем для вас дизайн</p></div>
+            <div class="work-item col-md-3 scrollflow -slide-top -opacity"><img src="img/work-4.jpg" alt=""/><p>Качественно сделанный заказ</p></div>
+            <a class="scrollflow -slide-top -opacity" href="#">Оформить заказ</a>
+        </div>
+    </div>
+</section>
+<section id="contacts" class="contacts">
+    <div class="container">
+        <div class="row">
+            <div class="text-form col-md-6">
+                <h2>Контакты:</h2>
+                <p><span>Адрес:</span>
+                    Россия, 367030, г. <br /> Махачкала,
+                    ул. Ярагского (26)<br/>
+                    (1 этаж «6 континент»)<br/>
+                    Отдел продаж: тел.:<br /> +7 928 123-45-67<br/>
+                    email: <a href="mailto:cifra05@mail.ru">cifra05@mail.ru</a> <br/>
+                    www.cifra05.ru
+                </p>
+            </div>
+            <div class="form col-md-6">
+                <form data-toggle="validator" role="form">
+
+                    <div class="form-group">
+                        <label for="inputName" class="control-label">Ваше имя и фамилия</label>
+                        <input type="text" class="form-control" id="inputName" name="name" placeholder="Магомедов Магомед" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail" class="control-label">Email</label>
+                        <input type="email" class="form-control" id="inputEmail" name="email" placeholder="Email" data-error="Адрес электронной почты недействителен" required>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword" class="control-label">Номер телефона</label>
+                        <input type="tel" data-minlength="11" name="number" class="form-control" id="inputPassword" placeholder="8(123)-456-78-90" required>
+                        <span class="help-block">Минимум 11 символов</span>
+
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">Отправить</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</section>
+<section class="map" id="map">
+    <div class="container-fluid">
+        <div class="row">
+            <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=6vWfplB2rIqs9oSOajIQAXZnxl3XnhuF&width=100%&height=386&lang=ru_RU&sourceType=constructor"></script>
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="container">
+        <div class="row">
+            <p>ГДЕ НАС НАЙТИ? <br/>
+                Наш адрес: <br/>
+                г. Махачкала, ул. Ярагского (26), 74 <br/>
+                (1 этаж «6 континент»)
+            </p>
+            <p class="number">+7 928 832-23-22</p>
+            <p>принимаем заказы</p>
+        </div>
+    </div>
+</footer>
+<div class="hidden">
+    <div class="inline-box" id="inline">
+        <p>Спасибо ваша заявка отправлена!!!</p>
+    </div>
 
 </div>
-
-
-<footer>
-    <p>Copyright © 2008 All Rights<p>
-</footer>
-
 <!-- @TODO Добавить комент -->
 
 <!-- Тут подключаем скрипты -->
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
     <script type="text/javascript" src="libs/respond/respond.min.js"></script>
+    <script type="text/javascript" src="libs/filter/jquery.mixitup.min.js"></script>
+    <script type="text/javascript" src="libs/bootstrap-validator/validator.min.js"></script>
     <script type="text/javascript" src="libs/jquery-mousewheel/jquery.mousewheel.min.js"></script>
 	<script type="text/javascript" src="libs/fancybox/jquery.fancybox.pack.js"></script>
-	<script type="text/javascript" src="libs/waypoints/waypoints-1.6.2.min.js"></script>
 	<script type="text/javascript" src="libs/scrollto/jquery.scrollTo.min.js"></script>
+    <script type="text/javascript" src="libs/animated/jquery.scrollflow.min.js"></script>
 	<script type="text/javascript" src="libs/countdown/jquery.plugin.js"></script>
 	<script type="text/javascript" src="libs/countdown/jquery.countdown.min.js"></script>
 	<script type="text/javascript" src="libs/countdown/jquery.countdown-ru.js"></script>
 	<script type="text/javascript" src="libs/landing-nav/navigation.js"></script>
+
 	<script type="text/javascript" src="js/common.js"></script>
 	<!-- Yandex.Metrika counter --><!-- /Yandex.Metrika counter -->
 	<!-- Google Analytics counter --><!-- /Google Analytics counter -->
