@@ -3,36 +3,46 @@ $(document).ready(function() {
     //Документация: https://github.com/eskju/eskju-jquery-scrollflow
     new ScrollFlow();
 
-    //Таймер обратного отсчета
-	//Документация: http://keith-wood.name/countdown.html
-	//<div class="countdown" date-time="2015-01-07"></div>
-	var austDay = new Date($(".countdown").attr("date-time"));
-	$(".countdown").countdown({until: austDay, format: 'yowdHMS'});
 
-	//Попап менеджер FancyBox
+
+//Попап менеджер FancyBox
 	//Документация: http://fancybox.net/howto
 	//<a class="fancybox"><img src="image.jpg" /></a>
 	//<a class="fancybox" data-fancybox-group="group"><img src="image.jpg" /></a>
 	$(".fancybox").fancybox();
+
+    $('.center-content_slider').slick({
+        adaptiveHeight: true
+    });
 
 	//Навигация по Landing Page
 	//$(".top_mnu") - это верхняя панель со ссылками.
 	//Ссылки вида <a href="#contacts">Контакты</a>
 	$(".top_mnu").navigation();
 
-    //Плавный скролл до блока .div по клику на .scroll
-	//Документация: https://github.com/flesler/jquery.scrollTo
-	$("a.scroll").click(function() {
-		$.scrollTo($(".div"), 800, {
-			offset: -90
-		});
-	});
+    $(".scroll").click(function(event){
+//Перехватываем обработку по умолчанию события нажатия мыши
+        event.preventDefault();
+
+//Получаем полный url - например, mysitecom/index.htm#home
+        var full_url = this.href;
+
+//Разделяем url по символу # и получаем имя целевой секции - home в адресе mysitecom/index.htm#home
+        var parts = full_url.split("#");
+        var trgt = parts[1];
+
+//Получаем смещение сверху для целевой секции
+        var target_offset = $("#"+trgt).offset();
+        var target_top = target_offset.top;
+
+//Переходим в целевую секцию установкой позиции прокрутки страницы в позицию целевой секции
+        $('html, body').animate({scrollTop:target_top}, 1500);
+    });
 
 	//Каруселька
 	//Документация: http://owlgraphic.com/owlcarousel/
     //Каруселька About
     $("#owl-demo").owlCarousel({
-
             navigation : false, // Show next and prev buttons
             slideSpeed : 300,
             paginationSpeed : 400,
@@ -47,6 +57,15 @@ $(document).ready(function() {
             paginationNumbers:false,
             responsiveRefreshRate : 100
     });
+    $("#owl-demo-partners").owlCarousel({
+
+        autoPlay: 3000, //Set AutoPlay to 3 seconds
+
+        items : 4,
+        itemsDesktop : [1199,3],
+        itemsDesktopSmall : [979,3]
+
+    });
 
 
 
@@ -55,9 +74,8 @@ $(document).ready(function() {
     var sync2 = $(".sync2");
 
     sync1.owlCarousel({
-        autoPlay: 5000,
+        transitionStyle : "fade",
         singleItem : true,
-        slideSpeed : 1000,
         navigation: false,
         pagination:false,
         afterAction : syncPosition,
@@ -89,38 +107,12 @@ $(document).ready(function() {
         }
     }
 
-    $(".sync2").on("click", ".owl-item", function(e){
+    $(".sync2").on("mousemove", ".owl-item", function(e){
         e.preventDefault();
         var number = $(this).data("owlItem");
         sync1.trigger("owl.goTo",number);
     });
 
-    function center(number){
-        var sync2visible = sync2.data("owlCarousel").owl.visibleItems;
-        var num = number;
-        var found = false;
-        for(var i in sync2visible){
-            if(num === sync2visible[i]){
-                var found = true;
-            }
-        }
-
-        if(found===false){
-            if(num>sync2visible[sync2visible.length-1]){
-                sync2.trigger("owl.goTo", num - sync2visible.length+2)
-            }else{
-                if(num - 1 === -1){
-                    num = 0;
-                }
-                sync2.trigger("owl.goTo", num);
-            }
-        } else if(num === sync2visible[sync2visible.length-1]){
-            sync2.trigger("owl.goTo", sync2visible[1])
-        } else if(num === sync2visible[0]){
-            sync2.trigger("owl.goTo", num-1)
-        }
-
-    }
 
 	//Кнопка "Наверх"
 	//Документация:
@@ -202,9 +194,9 @@ $(document).ready(function() {
     })
 
     //fix lateral filter and gallery on scrolling
-    $(window).on('scroll', function(){
-        (!window.requestAnimationFrame) ? fixGallery() : window.requestAnimationFrame(fixGallery);
-    });
+    //$(window).on('scroll', function(){
+    //    (!window.requestAnimationFrame) ? fixGallery() : window.requestAnimationFrame(fixGallery);
+    //});
 
     //Фиксация фильтра
 

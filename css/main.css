@@ -96,77 +96,78 @@ p {
 }
 header {
   width: 100%;
-  height: 397px;
+  height: auto;
   background-color: #f8dc00;
+  position: relative;
 }
-header .left-header {
-  height: 395px;
-  float: left;
-  width: 44.4%;
-  border-bottom: 39.700em solid #fff;
-  border-left: 0px solid transparent;
-  border-right: 107px solid transparent;
+header .container {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
 }
-header .left-header img {
+header .container .left-header-content img {
   -webkit-animation-duration: 2s;
   animation-duration: 2s;
   display: block;
   text-align: center;
-  margin: 10% 0 0 80px;
+  margin: 25% auto;
+  max-width: 100%;
 }
-header .right-header {
-  height: 397px;
-  background-color: #f8dc00;
-  width: 55.6%;
-  position: relative;
+header .container .right-header-content {
+  overflow: hidden;
 }
-header .right-header .right-header-info {
+header .container .right-header-content .right-header-info {
   margin-left: 275px;
   margin-top: 80px;
+  overflow: hidden;
 }
-header .right-header .right-header-info p {
+header .container .right-header-content .right-header-info p {
   float: left;
   margin-right: 35px;
   font-size: 1.500em;
   color: #575756;
 }
-header .right-header .right-header-info p i {
+header .container .right-header-content .right-header-info p i {
   font-size: 24px;
 }
-header .right-header .right-header-number {
+header .container .right-header-content .right-header-number {
   margin-left: 180px;
 }
-header .right-header .right-header-number p {
+header .container .right-header-content .right-header-number p {
   font: 4.4em mullerbold, sans-serif;
   color: #575756;
 }
-header .right-header .right-header-email {
+header .container .right-header-content .right-header-email {
   margin-left: 371px;
 }
-header .right-header .right-header-email p {
+header .container .right-header-content .right-header-email p {
   font: 4.4em mullerbold, sans-serif;
   font-size: 2.759em;
   text-align: left;
   color: #575756;
 }
-header .right-header .right-header-email p i {
+header .container .right-header-content .right-header-email p i {
   margin-right: 15px;
 }
-header .right-header .right-header-menu {
-  margin-top: 75px;
+header .container .right-header-menu {
+  margin-top: 50px;
   margin-left: 75px;
   overflow: hidden;
 }
-header .right-header .right-header-menu ul li {
+header .container .right-header-menu ul li {
   list-style: none;
   display: inline-block;
-  margin-right: 34px;
+  margin-right: 25px;
 }
-header .right-header .right-header-menu ul li a {
+header .container .right-header-menu ul li a {
   font: 2em mullerlight, sans-serif;
   color: #575756;
 }
-header .right-header .right-header-menu ul li a:hover {
+header .container .right-header-menu ul li a:hover {
   -moz-transition-duration: 0.2s;
   -webkit-transition-duration: 0.2s;
   -o-transition-duration: 0.2s;
@@ -176,30 +177,34 @@ header .right-header .right-header-menu ul li a:hover {
   line-height: 2em;
   display: inline-block;
 }
-header .right-header .right-header-menu ul li a.active {
+header .container .right-header-menu ul li a.active {
   line-height: 2em;
   display: inline-block;
   border-bottom: 3px solid #575756;
 }
-header .right-header .row {
+header .left-header {
+  height: auto;
   float: left;
+  width: 44.4%;
+  border-bottom: 39.700em solid #fff;
+  border-left: 0px solid transparent;
+  border-right: 107px solid transparent;
 }
-header .right-header .bg-right-header {
-  position: absolute;
-  width: 10%;
-  height: 397px;
+header .right-header {
+  height: auto;
   background-color: #f8dc00;
-  right: 0;
+  width: 55.6%;
+  position: relative;
 }
 .slider {
   width: 100%;
-  height: 39.600em;
+  height: auto;
   overflow: hidden;
   background-color: #f8dc00;
   position: relative;
 }
 .slider .slider-leftBox {
-  border-bottom: 39.6em solid #575756;
+  border-bottom: 41.9em solid #575756;
   border-left: 0px solid transparent;
   border-right: 107px solid transparent;
   height: 0;
@@ -215,13 +220,17 @@ header .right-header .bg-right-header {
 .slider .slider-leftBox p a {
   color: #fff;
 }
+.slider .slider-leftBox .owl-carousel {
+  left: 6%;
+}
 .slider .slider-leftBox .sync2 .owl-wrapper {
   padding-top: 25px;
+  width: 100% !important;
 }
 .slider .slider-leftBox .sync2 .owl-item {
   float: none;
   width: 100% !important;
-  margin-left: 130px;
+  margin-left: 39.6%;
 }
 .slider .slider-leftBox .sync2 .owl-item .item {
   -webkit-border-radius: 3px;
@@ -230,16 +239,17 @@ header .right-header .bg-right-header {
   cursor: pointer;
 }
 .slider .slider-leftBox .sync2 .owl-item .item a {
-  font: 3.924em mullerlight, sans-serif;
+  font: 3em mullerlight, sans-serif;
   color: #fff;
   text-transform: uppercase;
+  line-height: 1.5em;
 }
 .slider .slider-leftBox .sync2 .owl-item .item a.synced {
   color: #f8dc00;
 }
 .slider .slider-leftBox .sync2 .owl-item .item a.synced:after {
   margin-left: 15px;
-  font: 1em FontAwesome ;
+  font: 1em FontAwesome;
   content: "\f0da";
 }
 .slider .slider-leftBox .slider-button {
@@ -247,12 +257,12 @@ header .right-header .bg-right-header {
   padding: 10px 15px;
   border: 3px solid #f8dc00;
   margin-top: 15px;
-  margin-left: 130px;
+  margin-left: 45.5%;
   font: 2.193em mullerlight, sans-serif;
   color: #f8dc00;
 }
 .slider-rightBox {
-  height: 39.600em;
+  height: auto;
   width: 50%;
 }
 .slider-rightBox .sync1 {
@@ -267,35 +277,25 @@ header .right-header .bg-right-header {
   border-radius: 3px;
 }
 .about {
-  height: 44.30em;
+  height: auto;
   width: 100%;
   background-color: #f33353;
-}
-.about .about-leftBox {
-  width: 40%;
+  padding: 2% 0 ;
 }
 .about .about-leftBox h3 {
-  margin-top: 55px;
-  margin-left: 130px;
   color: #ffffff;
 }
 .about .about-leftBox p {
   line-height: normal;
-  margin-left: 130px;
-  margin-right: 20px;
   color: #fff;
 }
 .about .about-leftBox .about-button {
   display: inline-block;
   padding: 5px 15px;
   border: 3px solid #f8dc00;
-  margin-top: 15px;
-  margin-left: 130px;
+  margin-top: 30px;
   font: 2.193em mullerlight, sans-serif;
   color: #f8dc00;
-}
-.about .about-rightBox {
-  width: 60%;
 }
 .about .about-rightBox .owl-theme .owl-controls {
   margin-top: 0;
@@ -317,8 +317,8 @@ header .right-header .bg-right-header {
   font: 3.101em 'mullerlight', sans-serif;
   display: inline-block;
   position: absolute;
-  top: 10%;
-  left: 50%;
+  top: 0;
+  left: 59%;
 }
 .about .about-rightBox #owl-demo .item p span {
   font-family: 'mullerbold';
@@ -326,7 +326,7 @@ header .right-header .bg-right-header {
 }
 .about .about-rightBox #owl-demo .item img {
   display: block;
-  max-width: 100%;
+  max-width: 90%;
   height: auto;
 }
 .portfolio {
@@ -348,6 +348,7 @@ header .right-header .bg-right-header {
 }
 .work h3 {
   text-transform: uppercase;
+  padding: 10px;
 }
 .work .work-item img {
   margin: 35px auto;
@@ -371,7 +372,7 @@ header .right-header .bg-right-header {
 .contacts {
   border-top: 1px solid #dddddd;
   background-color: #fff ;
-  padding: 75px 75px;
+  padding: 75px 0px;
   position: relative;
   outline: hidden;
 }
@@ -381,9 +382,33 @@ header .right-header .bg-right-header {
 .contacts p {
   line-height: normal;
 }
+.contacts .text-form,
+.contacts .form {
+  overflow: hidden;
+}
+.partners {
+  border-top: 1px solid #dddddd;
+  padding-bottom: 50px;
+  background-color: #fff;
+}
+.partners h3 {
+  margin-top: 50px;
+  margin-left: 69px ;
+  margin-bottom: 25px;
+  font-size: 2.500em;
+  text-transform: uppercase;
+}
+.partners #owl-demo-partners .item {
+  margin: 3px;
+}
+.partners #owl-demo-partners .item img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 .map {
   width: 100%;
-  height: 386px;
+  height: 535px;
 }
 footer {
   padding-top: 35px;
@@ -400,4 +425,69 @@ footer p {
 footer .number {
   font: 3.2em 'mullerbold', sans-serif;
   color: #f8dc00;
+}
+/* ==========================================================================
+   Стили для страницы Page
+   ========================================================================== */
+.page-content {
+  margin: 5% auto;
+}
+.page-content .navbar-header {
+  background-color: #f33353;
+}
+.page-content button {
+  background-color: #fff;
+}
+.page-content button .icon-bar {
+  background-color: #f33353;
+}
+.page-content .left-menu li {
+  list-style: none;
+}
+.page-content .left-menu li a {
+  font: 2em 'mullerlight', sans-serif;
+  color: #000000 ;
+}
+.page-content .left-menu li a.active {
+  color: #f33353;
+}
+.page-content .center-content h2 {
+  margin: 0;
+  text-transform: uppercase;
+  color: #575756;
+  font-size: 4.000em ;
+}
+.page-content .center-content p {
+  margin-top: 25px;
+  line-height: normal;
+}
+.page-content .center-content img {
+  max-width: 100%;
+}
+.page-content .center-content .center-content_slider {
+  margin-top: 25px;
+}
+.page-content .center-content .center-content_slider img {
+  max-width: 100%;
+}
+.page-content .center-content .center-content_slider .slick-next,
+.page-content .center-content .center-content_slider .slick-prev {
+  width: 40px;
+  height: 40px;
+  z-index: 9999;
+}
+.page-content .center-content .center-content_slider .slick-prev {
+  left: 5px;
+}
+.page-content .center-content .center-content_slider .slick-next {
+  right: 5px;
+}
+.page-content .center-content .center-content_slider .slick-next::before,
+.page-content .center-content .center-content_slider .slick-prev::before {
+  font-size: 40px;
+  opacity: 1;
+  color: #f33353;
+}
+.page-content .center-content .center-content_slider .slick-list {
+  position: relative;
 }

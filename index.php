@@ -1,3 +1,8 @@
+<?
+include ("block/bd.php"); /*Соединяемся с базой*/
+$result = mysql_query("SELECT title FROM home",$db);
+$myrow = mysql_fetch_array($result);
+?>
 <!DOCTYPE html>
 <!--[if lt IE 7]><html lang="ru" class="lt-ie9 lt-ie8 lt-ie7"><![endif]-->
 <!--[if IE 7]><html lang="ru" class="lt-ie9 lt-ie8"><![endif]-->
@@ -14,14 +19,12 @@
     <meta name="keywords" content="FraemWork"/>
     <meta name="robots" content="all"/>
     <meta name="description" content="Framework">
-    <title>Цифра05</title>
+    <title><?php echo $myrow['title']; ?></title>
     <meta name='yandex-verification' content='6c33212f4dc14e06' />
-
     <!-- Для нормального отображении сайта в мобильных устройствах  -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="HandheldFriendly" content="true">
-
     <!-- SSS -->
     <link rel="DC.identifier" type="text/plain" href="http://#">
     <link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml" />
@@ -29,7 +32,6 @@
     <link rel="search" type="application/opensearchdescription+xml" title="DTstudio" href="opensearch.xml" />
     <meta name="robots" content="index, follow">
     <meta name='yandex-verification' content='4c5619304dc1f8d7' />
-
     <!-- Place favicon.ico in the root directory -->
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -48,81 +50,46 @@
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144.png">
     <!-- For iPad with high-resolution Retina display running iOS ≤ 7: -->
     <link rel="apple-touch-icon-precomposed" sizes="152x152" href="apple-touch-icon-152x152.png">
-
     <!-- Libs -->
-	<link rel="stylesheet" href="libs/bootstrap/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="libs/bootstrap/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="libs/fancybox/jquery.fancybox.css" type="text/css" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css" type="text/css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css" type="text/css" />
-	<link rel="stylesheet" href="libs/countdown/jquery.countdown.css" type="text/css" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css" type="text/css" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.transitions.min.css" type="text/css" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css" type="text/css" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="libs/countdown/jquery.countdown.css" type="text/css" />
     <link rel="stylesheet" href="libs/filter/filter.css" type="text/css" />
-
     <!-- Root Style -->
-	<link rel="stylesheet" href="css/main.css" type="text/css" />
+    <link rel="stylesheet" href="css/main.css" type="text/css" />
     <link rel="stylesheet" href="css/fonts.css" type="text/css"/>
     <link rel="stylesheet" href="css/ie.css" type="text/css" />
-	<link rel="stylesheet" href="css/media.css" type="text/css"/>
+    <link rel="stylesheet" href="css/media.css" type="text/css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.0/animate.min.css" type="text/css"/>
-
     <script type="text/javascript" src="js/modernizr.custom.js"></script>
-
     <!-- Пишем стили для каждой версии IE -->
     <!--[if IEMobile 7 ]> <html lang="ru" class=" iem7"> <![endif]-->
     <!--[if lt IE 7 ]> <html lang="ru" class="ie6 oldie"> <![endif]-->
     <!--[if IE 7 ]> <html lang="ru" class="ie7 oldie"> <![endif]-->
     <!--[if IE 8 ]> <html lang="ru" class="ie8 oldie"> <![endif]-->
-    <!--[if (gte IE 9)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html lang="ru"><!--<![endif]-->
+    <!--[if (gte IE 9)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html lang="ru"/><!--<![endif]-->
 
     <!--if lte IE 8]>
     <script src="libs/respond/respond.min.js"/></script>
     <![endif]-->
-
 </head>
 <body>
 <!--[if lt IE 8]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
-<header>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="left-header col-md-6"><img class="animated zoomIn" src="img/logo.png" alt=""/></div>
-            <div class="right-header col-md-6">
-                <div class="row">
-                    <div class="right-header-info animated fadeIn">
-                        <p><i class="fa fa-map-marker"></i> г. Махачкала,<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp; ул. Ярагского, 74 </p>
-                        <p><i class="fa fa-clock-o"></i>
-                            Пн-Пт: 9:00 - 18:00 <br/>
-                            &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;Сб.: 9:00 - 16:00 <br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Вс: Выходной </p>
-                    </div>
-                    <div class="right-header-number animated fadeIn">
-                        <p><i class="fa fa-phone"></i>
-                            +7 928 832-23-22</p>
-                    </div>
-                    <div class="right-header-email animated fadeIn"><p><i class="fa fa-envelope-o"></i>cifra05@ya.ru</p></div>
-                    <div class="right-header-menu animated fadeIn">
-                        <ul>
-                            <li><a class="active" href="">Главная</a></li>
-                            <li><a href="">О нас</a></li>
-                            <li><a href="">Услуги</a></li>
-                            <li><a href="">Цены</a></li>
-                            <li><a href="">Контакты</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-</header>
+<?php include_once("block/menu.php")?>
 <section id="slider" class="slider">
     <div class="container-fluid">
         <div class="row">
-            <div class="slider-leftBox col-md-6">
+            <div class="slider-leftBox col-sm-12 col-md-6">
                 <div  class="sync2 owl-carousel">
-                    <div class="item"><a class="active" href="">Цифровая печать</a></div>
+                    <div class="item"><a class="active " href="">Цифровая печать</a></div>
                     <div class="item"><a class="active" href="">Оперативная печать</a></div>
                     <div class="item"><a class="active" href="">Офсетная печать</a></div>
                     <div class="item"><a class="active" href="">Широкоформатная печать</a></div>
@@ -132,7 +99,7 @@
                 <a class="slider-button" href="#slider">Полный список услуг</a>
 
             </div>
-            <div class="slider-rightBox col-md-6">
+            <div class="slider-rightBox col-sm-12 col-md-6">
                 <div  class="sync1 owl-carousel">
                     <div class="item"><img src="img/1.png" alt=""/></div>
                     <div class="item"><img src="img/1.png" alt=""/></div>
@@ -147,20 +114,31 @@
 </section>
 
 <section id="about" class="about">
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
-            <div class="about-leftBox col-md-6">
+            <div class="about-leftBox col-md-5">
                 <h3>О НАС</h3>
-                <p>
-                    Печать переменных данных (персонализация) используется в производстве таких видов продукции, как скретч карты, билеты, открытки, листовки и буклеты с переменной информацией, рекламная полиграфия для персонализированных direct-mail рассылок, а также приглашения на свадьбу, дипломы, сертификаты и прочие издания, требующие включения уникальной информации. Необходимо отметить, что в своей работе Типография «Принт-Формула» стремится использовать все лучшие программные и технические решения, позволяющие неуклонно повышать качество полиграфии и снижать сроки изготовления.
+                <p><b>Наша основная деятельность:</b>
+                    оказание услуг по разработке дизайна и тиражированию полиграфической продукции, такие как рекламные материалы, офисные бланки, плакаты, календари, визитки, грамоты, этикетки, брошюры, журналы, книги и т.п.
+                    Выполняем работы на современном высококачественном оборудовании с помощью новейших технологий и материалов, оперативно и качественно по доступным ценам.
+                    Форматы изделий – от визиток до плакатов неограниченных размеров.
+                    Мы принимаем заказы с любыми тиражами - от нескольких экземпляров, сделанных в одном цвете или полноцветном варианте до многотысячных изданий.
+                    Принимаем заказы от частных лиц, индивидуальных предпринимателей, организаций, органов власти и общественных объединений.
+                    Задача нашего коллектива – быть профессионалами своего дела, понимать и решать заказы клиента быстро и эффективно.
+                    <br>
+                    <b>Наши возможности:</b>
+                    - цифровая печать <br>
+                    - офсетная печать<br>
+                    - широкоформатная и интерьерная печать<br>
+                    - полный спектр послепечатной обработки (тиснение, кашировка, вырубка, различные виды переплета и т.д.)
                 </p>
                 <a class="about-button" href="#about">Подробнее</a>
             </div>
-            <div class="about-rightBox col-md-6">
+            <div class="about-rightBox col-md-7">
                 <div id="owl-demo" class="owl-carousel owl-theme">
-                    <div class="item"><p>СКИДКИ <br/> НА РАЗРАБОТКУ <br/> <span>ФИРМЕННОГО <br/> СТИЛЯ</span> </p><img src="img/viz-cart.png" alt="The Last of us"></div>
-                    <div class="item"><p>СКИДКИ <br/> НА РАЗРАБОТКУ <br/> <span>ФИРМЕННОГО <br/> СТИЛЯ2</span> </p><img src="img/viz-cart.png" alt="GTA V"></div>
-                    <div class="item"><p>СКИДКИ <br/> НА РАЗРАБОТКУ <br/> <span>ФИРМЕННОГО <br/> СТИЛЯ3</span> </p><img src="img/viz-cart.png" alt="Mirror Edge"></div>
+                    <div class="item"><p>СКИДКИ <br/> НА РАЗРАБОТКУ <br/> <span>ФИРМЕННОГО<br/> СТИЛЯ</span> </p><img src="img/viz-cart.png" alt="The Last of us"></div>
+                    <div class="item"><p>СКИДКИ <br/> НА РАЗРАБОТКУ <br/> <span>ФИРМЕННОГО<br/> СТИЛЯ2</span> </p><img src="img/viz-cart.png" alt="GTA V"></div>
+                    <div class="item"><p>СКИДКИ <br/> НА РАЗРАБОТКУ <br/> <span>ФИРМЕННОГО<br/> СТИЛЯ3</span> </p><img src="img/viz-cart.png" alt="Mirror Edge"></div>
                 </div>
             </div>
         </div>
@@ -178,30 +156,41 @@
                                 <a data-type="all" href="#0">Все работы</a> <!-- selected option on mobile -->
                             </li>
                             <li class="filter"><a class="selected" href="#0" data-type="all">Все работы</a></li>
-                            <li class="filter" data-filter=".flyers"><a href="#0" data-type="flyers">Листовки</a></li>
-                            <li class="filter" data-filter=".forms"><a href="#0" data-type="forms">Бланки</a></li>
+                            <li class="filter" data-filter=".flyers"><a href="#0" data-type="flyers">Флаера</a></li>
                             <li class="filter" data-filter=".booklets"><a href="#0" data-type="booklets">Буклеты</a></li>
                             <li class="filter" data-filter=".cards"><a href="#0" data-type="cards">Визитки</a></li>
                         </ul> <!-- cd-filters -->
                     </div> <!-- cd-tab-filter -->
                 </div> <!-- cd-tab-filter-wrapper -->
-
                 <section class="cd-gallery">
                     <ul>
-                        <li class="mix flyers "><img src="img/img/img-1.jpg" alt="Image 1"></li>
-                        <li class="mix forms "><img src="img/img/img-2.jpg" alt="Image 2"></li>
-                        <li class="mix flyers "><img src="img/img/img-3.jpg" alt="Image 3"></li>
-                        <li class="mix booklets "><img src="img/img/img-1.jpg" alt="Image 4"></li>
-                        <li class="mix flyers "><img src="img/img/img-2.jpg" alt="Image 5"></li>
-                        <li class="mix forms "><img src="img/img/img-3.jpg" alt="Image 6"></li>
-                        <li class="mix forms "><img src="img/img/img-1.jpg" alt="Image 7"></li>
-                        <li class="mix flyers "><img src="img/img/img-2.jpg" alt="Image 8"></li>
-                        <li class="mix color-2 "><img src="img/img/img-3.jpg" alt="Image 9"></li>
-                        <li class="mix booklets "><img src="img/img/img-1.jpg" alt="Image 10"></li>
-                        <li class="mix flyers "><img src="img/img/img-2.jpg" alt="Image 11"></li>
-                        <li class="mix forms "><img src="img/img/img-3.jpg" alt="Image 12"></li>
-                        <li class="mix cards "><img src="img/img/img-1.jpg" alt="Image 11"></li>
-                        <li class="mix cards "><img src="img/img/img-2.jpg" alt="Image 12"></li>
+                        <li class="mix flyers "><a class="fancybox" href="img/portfolio/flaer/big/1.jpg"><img src="img/portfolio/flaer/1.jpg" alt="Image 1"></a></li>
+                        <li class="mix booklets "><a class="fancybox" href="img/portfolio/booklets/big/1.jpg"><img src="img/portfolio/booklets/1.jpg" alt="Image 2"></a></li>
+                        <li class="mix flyers "><a class="fancybox" href="img/portfolio/flaer/big/2.jpg"><img src="img/portfolio/flaer/2.jpg" alt="Image 3"></a></li>
+                        <li class="mix booklets "><a class="fancybox" href="img/portfolio/booklets/big/2.jpg"><img src="img/portfolio/booklets/2.jpg" alt="Image 4"></a></li>
+                        <li class="mix flyers "><a class="fancybox" href="img/portfolio/flaer/big/3.jpg"><img src="img/portfolio/flaer/3.jpg" alt="Image 5"></a></li>
+                        <li class="mix booklets "><a class="fancybox" href="img/portfolio/booklets/big/3.jpg"><img src="img/portfolio/booklets/3.jpg" alt="Image 6"></a></li>
+                        <li class="mix flyers "><a class="fancybox" href="img/portfolio/flaer/big/4.jpg"><img src="img/portfolio/flaer/4.jpg" alt="Image 7"></li></a>
+                        <li class="mix booklets "><a class="fancybox" href="img/portfolio/booklets/big/4.jpg"><img src="img/portfolio/booklets/4.jpg" alt="Image 8"></a></li>
+                        <li class="mix flyers "><a class="fancybox" href="img/portfolio/flaer/big/5.jpg"><img src="img/portfolio/flaer/5.jpg" alt="Image 9"></a></li>
+                        <li class="mix booklets "><a class="fancybox" href="img/portfolio/booklets/big/5.jpg"><img src="img/portfolio/booklets/5.jpg" alt="Image 10"></a></li>
+                        <li class="mix flyers "><a class="fancybox" href="img/portfolio/flaer/big/6.jpg"><img src="img/portfolio/flaer/6.jpg" alt="Image 11"></a></li>
+                        <li class="mix booklets "><a class="fancybox" href="img/portfolio/booklets/big/6.jpg"><img src="img/portfolio/booklets/6.jpg" alt="Image 12"></a></li>
+                        <li class="mix flyers "><a class="fancybox" href="img/portfolio/flaer/big/7.jpg"><img src="img/portfolio/flaer/7.jpg" alt="Image 13"></a></li>
+                        <li class="mix booklets "><a class="fancybox" href="img/portfolio/booklets/big/7.jpg"><img src="img/portfolio/booklets/7.jpg" alt="Image 14"></a></li>
+                        <li class="mix cards "><a class="fancybox" href="img/portfolio/cards/big/1.jpg"><img src="img/portfolio/cards/1.jpg" alt="Image 15"></a></li>
+                        <li class="mix booklets "><a class="fancybox" href="img/portfolio/booklets/big/8.jpg"><img src="img/portfolio/booklets/8.jpg" alt="Image 16"></a></li>
+                        <li class="mix cards "><a class="fancybox" href="img/portfolio/cards/big/2.jpg"><img src="img/portfolio/cards/2.jpg" alt="Image 17"></a></li>
+                        <li class="mix booklets "><a class="fancybox" href="img/portfolio/booklets/big/9.jpg"><img src="img/portfolio/booklets/9.jpg" alt="Image 18"></a></li>
+                        <li class="mix cards "><a class="fancybox" href="img/portfolio/cards/big/3.jpg"><img src="img/portfolio/cards/3.jpg" alt="Image 19"></a></li>
+                        <li class="mix booklets "><a class="fancybox" href="img/portfolio/booklets/big/10.jpg"><img src="img/portfolio/booklets/10.jpg" alt="Image 20"></a></li>
+                        <li class="mix cards "><a class="fancybox" href="img/portfolio/cards/big/4.jpg"><img src="img/portfolio/cards/4.jpg" alt="Image 21"></a></li>
+                        <li class="mix booklets "><a class="fancybox" href="img/portfolio/booklets/big/11.jpg"><img src="img/portfolio/booklets/11.jpg" alt="Image 22"></a></li>
+                        <li class="mix booklets "><a class="fancybox" href="img/portfolio/booklets/big/12.jpg"><img src="img/portfolio/booklets/12.jpg" alt="Image 23"></a></li>
+                        <li class="mix booklets "><a class="fancybox" href="img/portfolio/booklets/big/13.jpg"><img src="img/portfolio/booklets/13.jpg" alt="Image 24"></a></li>
+                        <li class="mix booklets "><a class="fancybox" href="img/portfolio/booklets/big/14.jpg"><img src="img/portfolio/booklets/14.jpg" alt="Image 25"></a></li>
+                        <li class="mix booklets "><a class="fancybox" href="img/portfolio/booklets/big/15.jpg"><img src="img/portfolio/booklets/15.jpg" alt="Image 26"></a></li>
+                        <li class="mix booklets "><a class="fancybox" href="img/portfolio/booklets/big/16.jpg"><img src="img/portfolio/booklets/16.jpg" alt="Image 27"></a></li>
                         <li class="gap"></li>
                         <li class="gap"></li>
                         <li class="gap"></li>
@@ -213,7 +202,7 @@
         </div>
     </div>
 </section>
-<section class="work">
+<section id="work" class="work">
     <div class="container">
         <div class="row">
             <h3>Как мы работаем</h3>
@@ -266,51 +255,21 @@
         </div>
     </div>
 </section>
-<section class="map" id="map">
-    <div class="container-fluid">
+<section id="partners" class="partners">
+    <div class="container">
         <div class="row">
-            <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=6vWfplB2rIqs9oSOajIQAXZnxl3XnhuF&width=100%&height=386&lang=ru_RU&sourceType=constructor"></script>
+            <h3>Наши парнеры</h3>
+            <div id="owl-demo-partners">
+                <div class="item"><img src="img/partners/1.jpg" alt="Owl Image"></div>
+                <div class="item"><img src="img/partners/2.jpg" alt="Owl Image"></div>
+                <div class="item"><img src="img/partners/3.jpg" alt="Owl Image"></div>
+                <div class="item"><img src="img/partners/4.jpg" alt="Owl Image"></div>
+                <div class="item"><img src="img/partners/5.jpg" alt="Owl Image"></div>
+                <div class="item"><img src="img/partners/6.jpg" alt="Owl Image"></div>
+            </div>
         </div>
     </div>
 </section>
-<footer>
-    <div class="container">
-        <div class="row">
-            <p>ГДЕ НАС НАЙТИ? <br/>
-                Наш адрес: <br/>
-                г. Махачкала, ул. Ярагского (26), 74 <br/>
-                (1 этаж «6 континент»)
-            </p>
-            <p class="number">+7 928 832-23-22</p>
-            <p>принимаем заказы</p>
-        </div>
-    </div>
-</footer>
-<div class="hidden">
-    <div class="inline-box" id="inline">
-        <p>Спасибо ваша заявка отправлена!!!</p>
-    </div>
-
-</div>
-<!-- @TODO Добавить комент -->
-
-<!-- Тут подключаем скрипты -->
-    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
-    <script type="text/javascript" src="libs/respond/respond.min.js"></script>
-    <script type="text/javascript" src="libs/filter/jquery.mixitup.min.js"></script>
-    <script type="text/javascript" src="libs/bootstrap-validator/validator.min.js"></script>
-    <script type="text/javascript" src="libs/jquery-mousewheel/jquery.mousewheel.min.js"></script>
-	<script type="text/javascript" src="libs/fancybox/jquery.fancybox.pack.js"></script>
-	<script type="text/javascript" src="libs/scrollto/jquery.scrollTo.min.js"></script>
-    <script type="text/javascript" src="libs/animated/jquery.scrollflow.min.js"></script>
-	<script type="text/javascript" src="libs/countdown/jquery.plugin.js"></script>
-	<script type="text/javascript" src="libs/countdown/jquery.countdown.min.js"></script>
-	<script type="text/javascript" src="libs/countdown/jquery.countdown-ru.js"></script>
-	<script type="text/javascript" src="libs/landing-nav/navigation.js"></script>
-
-	<script type="text/javascript" src="js/common.js"></script>
-	<!-- Yandex.Metrika counter --><!-- /Yandex.Metrika counter -->
-	<!-- Google Analytics counter --><!-- /Google Analytics counter -->
+<?php include_once("block/footer.php") ?>
 </body>
 </html>
