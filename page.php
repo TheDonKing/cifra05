@@ -133,6 +133,46 @@ $myrow = mysql_fetch_array($result);
     </div>
 </div>
 
+<div id="reviews">
+    <div class="testimonial hidden">
+        <p>"Here is a review. I love the product!"</p>
+        <span class="customer">- John Doe, Ohio</span>
+    </div>
+    <div class="testimonial hidden">
+        <p>"Here is a review. I love the product!"</p>
+        <span class="customer">- John Doe, Ohio</span>
+    </div>
+    <div class="testimonial hidden">
+        <p>"Here is a review. I love the product!"</p>
+        <span class="customer">- John Doe, Ohio</span>
+    </div>
+    <div class="testimonial hidden">
+        <p>"Here is a review. I love the product!"</p>
+        <span class="customer">- John Doe, Ohio</span>
+    </div>
+    <div class="testimonial hidden">
+        <p>"Here is a review. I love the product!"</p>
+        <span class="customer">- John Doe, Ohio</span>
+    </div>
+    <div class="testimonial hidden">
+        <p>"Here is a review. I love the product!"</p>
+        <span class="customer">- John Doe, Ohio</span>
+    </div>
+    <div class="testimonial hidden">
+        <p>"Here is a review. I love the product!"</p>
+        <span class="customer">- John Doe, Ohio</span>
+    </div>
+    <div class="testimonial hidden">
+        <p>"Here is a review. I love the product!"</p>
+        <span class="customer">- John Doe, Ohio</span>
+    </div>
+    <div class="testimonial hidden">
+        <p>"Here is a review. I love the product!"</p>
+        <span class="customer">- John Doe, Ohio</span>
+    </div>
+
+    <button id="show-more">Show More</button>
+</div>
 <?php include_once("block/footer.php") ?>
 </body>
 </html>

@@ -2,6 +2,7 @@
 include ("block/bd.php"); /*Соединяемся с базой*/
 $result = mysql_query("SELECT title FROM home",$db);
 $myrow = mysql_fetch_array($result);
+
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]><html lang="ru" class="lt-ie9 lt-ie8 lt-ie7"><![endif]-->
@@ -89,12 +90,15 @@ $myrow = mysql_fetch_array($result);
         <div class="row">
             <div class="slider-leftBox col-sm-12 col-md-6">
                 <div  class="sync2 owl-carousel">
-                    <div class="item"><a class="active " href="">Цифровая печать</a></div>
-                    <div class="item"><a class="active" href="">Оперативная печать</a></div>
-                    <div class="item"><a class="active" href="">Офсетная печать</a></div>
-                    <div class="item"><a class="active" href="">Широкоформатная печать</a></div>
-                    <div class="item"><a class="active" href="">Дизайн</a></div>
-                    <div class="item"><a class="active" href="">Переплетные работы</a></div>
+                    <?
+                    $result = mysql_query ("SELECT id, title FROM page",$db);
+                    $myrow = mysql_fetch_array ($result);
+                    do {
+                        printf ("
+                        <div class='item'><a class='active' href='page_view.php?id=%s'>%s</a></div>",$myrow["id"],$myrow["title"]);
+                    }
+                    while ($myrow = mysql_fetch_array ($result));
+                    ?>
                 </div>
                 <a class="slider-button" href="#slider">Полный список услуг</a>
 
@@ -164,38 +168,40 @@ $myrow = mysql_fetch_array($result);
                 </div> <!-- cd-tab-filter-wrapper -->
                 <section class="cd-gallery">
                     <ul>
-                        <li class="mix flyers "><a class="fancybox" href="img/portfolio/flaer/big/1.jpg"><img src="img/portfolio/flaer/1.jpg" alt="Image 1"></a></li>
-                        <li class="mix booklets "><a class="fancybox" href="img/portfolio/booklets/big/1.jpg"><img src="img/portfolio/booklets/1.jpg" alt="Image 2"></a></li>
-                        <li class="mix flyers "><a class="fancybox" href="img/portfolio/flaer/big/2.jpg"><img src="img/portfolio/flaer/2.jpg" alt="Image 3"></a></li>
-                        <li class="mix booklets "><a class="fancybox" href="img/portfolio/booklets/big/2.jpg"><img src="img/portfolio/booklets/2.jpg" alt="Image 4"></a></li>
-                        <li class="mix flyers "><a class="fancybox" href="img/portfolio/flaer/big/3.jpg"><img src="img/portfolio/flaer/3.jpg" alt="Image 5"></a></li>
-                        <li class="mix booklets "><a class="fancybox" href="img/portfolio/booklets/big/3.jpg"><img src="img/portfolio/booklets/3.jpg" alt="Image 6"></a></li>
-                        <li class="mix flyers "><a class="fancybox" href="img/portfolio/flaer/big/4.jpg"><img src="img/portfolio/flaer/4.jpg" alt="Image 7"></li></a>
-                        <li class="mix booklets "><a class="fancybox" href="img/portfolio/booklets/big/4.jpg"><img src="img/portfolio/booklets/4.jpg" alt="Image 8"></a></li>
-                        <li class="mix flyers "><a class="fancybox" href="img/portfolio/flaer/big/5.jpg"><img src="img/portfolio/flaer/5.jpg" alt="Image 9"></a></li>
-                        <li class="mix booklets "><a class="fancybox" href="img/portfolio/booklets/big/5.jpg"><img src="img/portfolio/booklets/5.jpg" alt="Image 10"></a></li>
-                        <li class="mix flyers "><a class="fancybox" href="img/portfolio/flaer/big/6.jpg"><img src="img/portfolio/flaer/6.jpg" alt="Image 11"></a></li>
-                        <li class="mix booklets "><a class="fancybox" href="img/portfolio/booklets/big/6.jpg"><img src="img/portfolio/booklets/6.jpg" alt="Image 12"></a></li>
-                        <li class="mix flyers "><a class="fancybox" href="img/portfolio/flaer/big/7.jpg"><img src="img/portfolio/flaer/7.jpg" alt="Image 13"></a></li>
-                        <li class="mix booklets "><a class="fancybox" href="img/portfolio/booklets/big/7.jpg"><img src="img/portfolio/booklets/7.jpg" alt="Image 14"></a></li>
-                        <li class="mix cards "><a class="fancybox" href="img/portfolio/cards/big/1.jpg"><img src="img/portfolio/cards/1.jpg" alt="Image 15"></a></li>
-                        <li class="mix booklets "><a class="fancybox" href="img/portfolio/booklets/big/8.jpg"><img src="img/portfolio/booklets/8.jpg" alt="Image 16"></a></li>
-                        <li class="mix cards "><a class="fancybox" href="img/portfolio/cards/big/2.jpg"><img src="img/portfolio/cards/2.jpg" alt="Image 17"></a></li>
-                        <li class="mix booklets "><a class="fancybox" href="img/portfolio/booklets/big/9.jpg"><img src="img/portfolio/booklets/9.jpg" alt="Image 18"></a></li>
-                        <li class="mix cards "><a class="fancybox" href="img/portfolio/cards/big/3.jpg"><img src="img/portfolio/cards/3.jpg" alt="Image 19"></a></li>
-                        <li class="mix booklets "><a class="fancybox" href="img/portfolio/booklets/big/10.jpg"><img src="img/portfolio/booklets/10.jpg" alt="Image 20"></a></li>
-                        <li class="mix cards "><a class="fancybox" href="img/portfolio/cards/big/4.jpg"><img src="img/portfolio/cards/4.jpg" alt="Image 21"></a></li>
-                        <li class="mix booklets "><a class="fancybox" href="img/portfolio/booklets/big/11.jpg"><img src="img/portfolio/booklets/11.jpg" alt="Image 22"></a></li>
-                        <li class="mix booklets "><a class="fancybox" href="img/portfolio/booklets/big/12.jpg"><img src="img/portfolio/booklets/12.jpg" alt="Image 23"></a></li>
-                        <li class="mix booklets "><a class="fancybox" href="img/portfolio/booklets/big/13.jpg"><img src="img/portfolio/booklets/13.jpg" alt="Image 24"></a></li>
-                        <li class="mix booklets "><a class="fancybox" href="img/portfolio/booklets/big/14.jpg"><img src="img/portfolio/booklets/14.jpg" alt="Image 25"></a></li>
-                        <li class="mix booklets "><a class="fancybox" href="img/portfolio/booklets/big/15.jpg"><img src="img/portfolio/booklets/15.jpg" alt="Image 26"></a></li>
-                        <li class="mix booklets "><a class="fancybox" href="img/portfolio/booklets/big/16.jpg"><img src="img/portfolio/booklets/16.jpg" alt="Image 27"></a></li>
+                        <li class="mix  flyers "><a class="fancybox hidden" href="img/portfolio/flaer/big/1.jpg"><img src="img/portfolio/flaer/1.jpg" alt="Image 1"></a></li>
+                        <li class="mix  booklets "><a class="fancybox hidden" href="img/portfolio/booklets/big/1.jpg"><img src="img/portfolio/booklets/1.jpg" alt="Image 2"></a></li>
+                        <li class="mix  flyers "><a class="fancybox hidden" href="img/portfolio/flaer/big/2.jpg"><img src="img/portfolio/flaer/2.jpg" alt="Image 3"></a></li>
+                        <li class="mix  booklets "><a class="fancybox hidden" href="img/portfolio/booklets/big/2.jpg"><img src="img/portfolio/booklets/2.jpg" alt="Image 4"></a></li>
+                        <li class="mix  flyers "><a class="fancybox hidden" href="img/portfolio/flaer/big/3.jpg"><img src="img/portfolio/flaer/3.jpg" alt="Image 5"></a></li>
+                        <li class="mix  booklets "><a class="fancybox hidden" href="img/portfolio/booklets/big/3.jpg"><img src="img/portfolio/booklets/3.jpg" alt="Image 6"></a></li>
+                        <li class="mix  flyers "><a class="fancybox hidden" href="img/portfolio/flaer/big/4.jpg"><img src="img/portfolio/flaer/4.jpg" alt="Image 7"></li></a>
+                        <li class="mix  booklets "><a class="fancybox hidden" href="img/portfolio/booklets/big/4.jpg"><img src="img/portfolio/booklets/4.jpg" alt="Image 8"></a></li>
+                        <li class="mix  flyers "><a class="fancybox hidden" href="img/portfolio/flaer/big/5.jpg"><img src="img/portfolio/flaer/5.jpg" alt="Image 9"></a></li>
+                        <li class="mix  booklets "><a class="fancybox hidden" href="img/portfolio/booklets/big/5.jpg"><img src="img/portfolio/booklets/5.jpg" alt="Image 10"></a></li>
+                        <li class="mix  flyers "><a class="fancybox hidden" href="img/portfolio/flaer/big/6.jpg"><img src="img/portfolio/flaer/6.jpg" alt="Image 11"></a></li>
+                        <li class="mix  booklets "><a class="fancybox hidden" href="img/portfolio/booklets/big/6.jpg"><img src="img/portfolio/booklets/6.jpg" alt="Image 12"></a></li>
+                        <li class="mix  flyers "><a class="fancybox hidden" href="img/portfolio/flaer/big/7.jpg"><img src="img/portfolio/flaer/7.jpg" alt="Image 13"></a></li>
+                        <li class="mix  booklets "><a class="fancybox hidden" href="img/portfolio/booklets/big/7.jpg"><img src="img/portfolio/booklets/7.jpg" alt="Image 14"></a></li>
+                        <li class="mix  cards "><a class="fancybox hidden" href="img/portfolio/cards/big/1.jpg"><img src="img/portfolio/cards/1.jpg" alt="Image 15"></a></li>
+                        <li class="mix  booklets "><a class="fancybox hidden" href="img/portfolio/booklets/big/8.jpg"><img src="img/portfolio/booklets/8.jpg" alt="Image 16"></a></li>
+                        <li class="mix  cards "><a class="fancybox hidden" href="img/portfolio/cards/big/2.jpg"><img src="img/portfolio/cards/2.jpg" alt="Image 17"></a></li>
+                        <li class="mix  booklets "><a class="fancybox hidden" href="img/portfolio/booklets/big/9.jpg"><img src="img/portfolio/booklets/9.jpg" alt="Image 18"></a></li>
+                        <li class="mix  cards "><a class="fancybox hidden" href="img/portfolio/cards/big/3.jpg"><img src="img/portfolio/cards/3.jpg" alt="Image 19"></a></li>
+                        <li class="mix  booklets "><a class="fancybox hidden" href="img/portfolio/booklets/big/10.jpg"><img src="img/portfolio/booklets/10.jpg" alt="Image 20"></a></li>
+                        <li class="mix  cards "><a class="fancybox hidden" href="img/portfolio/cards/big/4.jpg"><img src="img/portfolio/cards/4.jpg" alt="Image 21"></a></li>
+                        <li class="mix  booklets "><a class="fancybox hidden" href="img/portfolio/booklets/big/11.jpg"><img src="img/portfolio/booklets/11.jpg" alt="Image 22"></a></li>
+                        <li class="mix  booklets "><a class="fancybox hidden" href="img/portfolio/booklets/big/12.jpg"><img src="img/portfolio/booklets/12.jpg" alt="Image 23"></a></li>
+                        <li class="mix  booklets "><a class="fancybox hidden" href="img/portfolio/booklets/big/13.jpg"><img src="img/portfolio/booklets/13.jpg" alt="Image 24"></a></li>
+                        <li class="mix  booklets "><a class="fancybox hidden" href="img/portfolio/booklets/big/14.jpg"><img src="img/portfolio/booklets/14.jpg" alt="Image 25"></a></li>
+                        <li class="mix  booklets "><a class="fancybox hidden" href="img/portfolio/booklets/big/15.jpg"><img src="img/portfolio/booklets/15.jpg" alt="Image 26"></a></li>
+                        <li class="mix  booklets "><a class="fancybox hidden" href="img/portfolio/booklets/big/16.jpg"><img src="img/portfolio/booklets/16.jpg" alt="Image 27"></a></li>
+                        <li class="gap"
                         <li class="gap"></li>
                         <li class="gap"></li>
-                        <li class="gap"></li>
+                        <button class="selected" id="show-more">Посмотреть еще</button>
                     </ul>
                     <div class="cd-fail-message">No results found</div>
+
                 </section> <!-- cd-gallery -->
 
             </main> <!-- cd-main-content -->

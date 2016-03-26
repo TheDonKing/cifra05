@@ -24,15 +24,19 @@
                         </div>
                         <div class="right-header-number animated fadeIn">
                             <p><i class="fa fa-phone"></i>
-                                +7 928 832-23-22</p>
+                                +7 988 222-22-59
+                            </p>
                         </div>
-                        <div class="right-header-email animated fadeIn"><p><i class="fa fa-envelope-o"></i>cifra05@ya.ru</p></div>
+                        <div class="right-header-email animated fadeIn">
+                            <p><i class="fa fa-envelope-o"></i>cifra05@ya.ru</p>
+                            <p><i class="fa fa-instagram"></i>cifra05</p>
+                        </div>
                         <div class="right-header-menu animated fadeIn">
                             <ul>
-                                <li><a class="active" href="index.php">Главная</a></li>
+                                <li><a class="" href="index.php">Главная</a></li>
                                 <li><a class="scroll" href="#about">О нас</a></li>
-                                <li><a href="page.php">Услуги</a></li>
                                 <li><a class="scroll" href="#work">Как мы работаем</a></li>
+                                <li><a class="scroll" href="#partners">Наши партнеры</a></li>
                                 <li><a class="scroll" href="#contacts">Контакты</a></li>
                             </ul>
                         </div>

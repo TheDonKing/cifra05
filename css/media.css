@@ -79,6 +79,9 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
+    header{
+        background-color: #fff;
+    }
     header .container .right-header-content .right-header-info,
     header .container .right-header-content .right-header-number,
     header .container .right-header-content .right-header-email{
@@ -100,6 +103,10 @@
         border-right: none;
         border-bottom:35em solid #575756  ;
     }
+    .slider .slider-rightBox{
+  display: none;
+    }
+
     header .container .right-header-content .right-header-number p{
         font-size: 2.5em;
     }
@@ -121,6 +128,9 @@
     }
     .about .about-rightBox #owl-demo .item p{
         display: none;
+    }
+    .map{
+        height: 335px;
     }
 }
 

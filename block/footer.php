@@ -1,7 +1,7 @@
 <section class="map" id="map">
     <div class="container-fluid">
         <div class="row">
-            <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=nxs1tJ2jXfAkMriih3Rb7ljccXsEGq3o&width=100%&height=535&lang=ru_RU&sourceType=constructor"></script>
+            <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=4dtoR0GQUQSD-sBlcqqk63xCJlBU00uz&width=100%&height=335&lang=ru_RU&sourceType=constructor"></script>
         </div>
     </div>
 </section>

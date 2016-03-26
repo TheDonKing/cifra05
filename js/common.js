@@ -1,9 +1,11 @@
 $(document).ready(function() {
 
+
+
+
+
     //Документация: https://github.com/eskju/eskju-jquery-scrollflow
     new ScrollFlow();
-
-
 
 //Попап менеджер FancyBox
 	//Документация: http://fancybox.net/howto
@@ -267,6 +269,13 @@ $(document).ready(function() {
         }, 200 );
     });
 
+    function showMore(){
+        $('.hidden:lt(4)').removeClass('hidden');
+    }
+
+
+    $('.hidden:lt(4)').removeClass('hidden');
+    $('#show-more').on('click', showMore);
 
 
 });
@@ -358,3 +367,4 @@ var buttonFilter = {
         }
     }
 };
+
